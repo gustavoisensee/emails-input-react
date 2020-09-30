@@ -16,7 +16,7 @@
     "test": "react-scripts test",
     "build": "webpack --config webpackSetup.js",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "storybook:build": "build-storybook -o ./build"
   },
   "eslintConfig": {
     "extends": "react-app"

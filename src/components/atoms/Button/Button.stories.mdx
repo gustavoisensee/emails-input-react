@@ -1,0 +1,22 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import Button from './Button';
+
+<Meta title="Example/Button"  component={Button} />
+
+# Button
+
+## Props
+| Name | Type | Default Value | Description |
+|---|:---:|---:|---|
+| text | string | '' |-|
+| onClick | function | null |-|
+
+
+## Code Sample
+<Canvas>
+  <Story name="Playground" showCode>
+    <Button text='button 1' onClick={() => alert('Button 1 clicked!')} />
+    <Button text='button 2' onClick={() => alert('Button 2 clicked!')} />
+  </Story>
+</Canvas>

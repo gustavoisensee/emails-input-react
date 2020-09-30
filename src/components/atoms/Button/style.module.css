@@ -1,0 +1,12 @@
+.button {
+  composes: font from '../../styles.module.css';
+  background-color: #4262FF;
+  border: 0;
+  color: white;
+  padding: 8px 16px;
+  margin-right: 16px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+}

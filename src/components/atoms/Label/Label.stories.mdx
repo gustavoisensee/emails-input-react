@@ -1,0 +1,24 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import Label from './Label';
+
+<Meta title="Example/Label"  component={Label} />
+
+# Label
+
+## Props
+| Name | Type | Default Value | Description |
+|---|:---:|---:|---|
+| text | string | '' |-|
+| valid | boolean | true |-|
+| onDeleteClick | function | null |-|
+
+
+## Code Sample
+<Canvas>
+  <Story name="Playground" showCode>
+    <Label text='test1@miro.com' onDeleteClick={() => alert('Delete clicked!')} />
+    <Label text='test2@miro.com' valid={false} />
+    <Label text='test3@miro.com' />
+  </Story>
+</Canvas>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script>
+    var root = document.getElementById('root');
+
+    [
+      { text: 'test1@miro.com', valid: true, onDeleteClick: () => console.log('test1') },
+      { text: 'test2@miro.com', valid: false, onDeleteClick: () => console.log('test2') },
+      { text: 'test3@miro.com', valid: true, onDeleteClick: () => console.log('test3') }
+    ].forEach(props => {
+      const div = document.createElement('div');
+      miro.label(div, props);
+      root.append(div);
+    })
+  </script>
+</html>

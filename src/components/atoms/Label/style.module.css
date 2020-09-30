@@ -1,0 +1,36 @@
+.container {
+  display: inline-block;
+  padding: 0 8px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+
+.containerMain {
+  composes: container;
+  border-radius: 25px;
+  background: rgba(102, 153, 255, 0.2);
+}
+
+.containerError {
+  composes: container;
+  border-bottom: 1px dashed #D92929;
+}
+
+.text {
+  composes: font from '../../styles.module.css';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: right;
+  margin-right: 4px;
+}
+
+.remove {
+  composes: font from '../../styles.module.css';;
+  cursor: pointer;
+}
+
+.remove:hover {
+  font-weight: 800;
+}

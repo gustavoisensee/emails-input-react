@@ -1,0 +1,9 @@
+.container {
+  background: #FFFFFF;
+  border: 1px solid #C3C2CF;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 96;
+  padding: 8px;
+  overflow: hidden;
+}

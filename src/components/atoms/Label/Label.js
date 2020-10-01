@@ -21,8 +21,8 @@ Label.propTypes = {
   onDeleteClick: PropTypes.func
 };
 
-const areEqual = (prevProps, nextProps) => (
-  prevProps.text === nextProps.text
+const areEqual = (prev, next) => (
+  prev.text === next.text
 );
 
 export default memo(Label, areEqual);

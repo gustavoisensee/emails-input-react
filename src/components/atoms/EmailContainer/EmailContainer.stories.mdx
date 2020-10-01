@@ -1,7 +1,7 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
 import EmailContainer from './EmailContainer';
-import Label from '../Label';
+import Email from '../Email';
 
 <Meta title="Example/EmailContainer"  component={EmailContainer} />
 
@@ -16,16 +16,16 @@ import Label from '../Label';
 <Canvas>
   <Story name="Playground" showCode>
     <EmailContainer>
-      <Label text='test1@miro.com' onDeleteClick={() => alert('Delete clicked!')} />
-      <Label text='test2@miro.com' valid={false} />
-      <Label text='test3@miro.com' />
-      <Label text='test4@miro.com' />
-      <Label text='test5@miro.com' />
-      <Label text='test6@miro.com' />
-      <Label text='test7@miro.com' />
-      <Label text='test8@miro.com' />
-      <Label text='test9@miro.com' />
-      <Label text='test10@miro.com' />
+      <Email text='test1@miro.com' onDeleteClick={() => alert('Delete clicked!')} />
+      <Email text='test2@miro.com' valid={false} />
+      <Email text='test3@miro.com' />
+      <Email text='test4@miro.com' />
+      <Email text='test5@miro.com' />
+      <Email text='test6@miro.com' />
+      <Email text='test7@miro.com' />
+      <Email text='test8@miro.com' />
+      <Email text='test9@miro.com' />
+      <Email text='test10@miro.com' />
     </EmailContainer>
   </Story>
 </Canvas>

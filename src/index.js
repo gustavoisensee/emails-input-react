@@ -1,14 +1,18 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Label from './components/atoms/Label';
 import Button from './components/atoms/Button';
+import Email from './components/atoms/Email';
+import EmailContainer from './components/atoms/EmailContainer';
+import Text from './components/atoms/Text';
 
 const render = (container, Comp, props) => {
   ReactDOM.render(<Comp {...props} />, container);
 };
 
 window.miro = {
-  label: (container, props) => render(container, Label, props),
-  button: (container, props) => render(container, Button, props)
+  button: (container, props) => render(container, Button, props),
+  email: (container, props) => render(container, Email, props),
+  emailContainer: (container, props) => render(container, EmailContainer, props),
+  text: (container, props) => render(container, Text, props),
 };

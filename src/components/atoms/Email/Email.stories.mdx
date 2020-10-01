@@ -1,10 +1,10 @@
 import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import { action } from '@storybook/addon-actions';
-import Label from './Label';
+import Email from './Email';
 
-<Meta title="Example/Label"  component={Label} />
+<Meta title="Example/Email"  component={Email} />
 
-# Label
+# Email
 
 ## Props
 | Name | Type | Default Value | Description |
@@ -17,8 +17,8 @@ import Label from './Label';
 ## Code Sample
 <Canvas>
   <Story name="Playground" showCode>
-    <Label text='test1@miro.com' onDeleteClick={() => alert('Delete clicked!')} />
-    <Label text='test2@miro.com' valid={false} />
-    <Label text='test3@miro.com' />
+    <Email text='test1@miro.com' onDeleteClick={() => alert('Delete clicked!')} />
+    <Email text='test2@miro.com' valid={false} />
+    <Email text='test3@miro.com' />
   </Story>
 </Canvas>

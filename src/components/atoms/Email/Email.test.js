@@ -1,10 +1,10 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import Label from './Label';
+import Email from './Email';
 
-describe('<Label />', () => {
+describe('<Email />', () => {
   it('renders component properly', () => {
-    const { getByText } = render(<Label text='test' />);
+    const { getByText } = render(<Email text='test' />);
     const textElement = getByText(/test/i);
     const deleteElement = getByText('x');
 
@@ -14,7 +14,7 @@ describe('<Label />', () => {
 
   it('should call onDeleteClick when X is clicked', () => {
     const onDeleteClick = jest.fn();
-    const { getByText } = render(<Label text='test' onDeleteClick={onDeleteClick} />);
+    const { getByText } = render(<Email text='test' onDeleteClick={onDeleteClick} />);
     const deleteButton = getByText('x');
 
     fireEvent.click(deleteButton);

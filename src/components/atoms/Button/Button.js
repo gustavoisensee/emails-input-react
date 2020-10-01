@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import styles from './style.module.css';
 
 const Button = ({ text, onClick }) => (
-  <button onClick={onClick} className={styles.button}>
+  <button onClick={() => setTimeout(onClick, 300)} className={styles.button}>
     {text}
   </button>
 );
@@ -13,4 +13,8 @@ Button.propTypes = {
   onClick: PropTypes.func
 };
 
-export default Button;
+const areEqual = (prev, next) => (
+  prev.text === next.text
+);
+
+export default memo(Button, areEqual);

@@ -9,4 +9,13 @@
   border-radius: 6px;
   cursor: pointer;
   outline: none;
+  transition: all 200ms linear;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button:active {
+  transform: translateY(4px);
 }

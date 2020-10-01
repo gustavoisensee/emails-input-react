@@ -1,0 +1,21 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import Text from './Text';
+
+<Meta title="Example/Text"  component={Text} />
+
+# Text
+
+## Props
+| Name | Type | Default Value | Description |
+|---|:---:|---:|---|
+| children | string | '' |-|
+
+## Code Sample
+<Canvas>
+  <Story name="Playground" showCode>
+    <Text>Text 1 </Text>
+    <Text bold>Text 2 </Text>
+    <Text>Text 3</Text>
+  </Story>
+</Canvas>

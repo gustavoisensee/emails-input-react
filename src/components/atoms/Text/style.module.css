@@ -1,0 +1,14 @@
+.text {
+  composes: font from '../../styles.module.css';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.textBold {
+  composes: text;
+  font-weight: 700;
+}

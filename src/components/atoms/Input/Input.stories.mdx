@@ -1,0 +1,19 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import Input from './Input';
+
+<Meta title="Example/Input"  component={Input} />
+
+# Input
+
+## Props
+| Name | Type | Default Value | Description |
+|---|:---:|---:|---|
+| props | HTMLInputElement props | '' |-|
+
+## Code Sample
+<Canvas>
+  <Story name="Playground" showCode>
+    <Input onChange={(e) => console.log(e.target.value)} placeholder='Add more people...' />
+  </Story>
+</Canvas>

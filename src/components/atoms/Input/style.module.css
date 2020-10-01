@@ -1,0 +1,11 @@
+.input {
+  composes: font from '../../styles.module.css';
+  border: 0;
+  padding: 16px;
+  color: #C3C2CF;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #C3C2CF;
+}

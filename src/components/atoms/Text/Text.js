@@ -13,7 +13,7 @@ Text.propTypes = {
 };
 
 const areEqual = (prev, next) => (
-  prev.text === next.text
+  prev.children === next.children
 );
 
 export default memo(Text, areEqual);

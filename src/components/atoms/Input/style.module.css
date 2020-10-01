@@ -1,7 +1,7 @@
 .input {
   composes: font from '../../styles.module.css';
   border: 0;
-  padding: 16px;
+  padding: 4px 8px;
   color: #C3C2CF;
   outline: none;
 }

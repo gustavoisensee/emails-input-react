@@ -1,28 +1,38 @@
-import React, { memo } from 'react';
+import React, { useCallback, memo } from 'react';
 import PropTypes from 'prop-types';
 import styles from './style.module.css';
 
-const Label = ({ text, valid, onDeleteClick }) => (
-  <div className={valid ? styles.containerMain : styles.containerError}>
-    <span className={styles.text}>{text}</span>
-    <span className={styles.remove} onClick={onDeleteClick}>x</span>
-  </div>
-);
+const Email = ({ id, text, valid, onDeleteClick }) => {
+  const handleOnClick = useCallback(
+    () => { onDeleteClick(id); },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [id],
+  );
 
-Label.defaultProps = {
+  return (
+    <div className={valid ? styles.containerMain : styles.containerError}>
+      <span className={styles.text}>{valid ? text : 'Invalid email'}</span>
+      <span className={styles.remove} onClick={handleOnClick}>x</span>
+    </div>
+  );
+};
+
+Email.defaultProps = {
+  id: '',
   text: '',
   valid: true,
   onDeleteClick: null
 };
 
-Label.propTypes = {
+Email.propTypes = {
+  id: PropTypes.string,
   text: PropTypes.string,
   valid: PropTypes.bool,
   onDeleteClick: PropTypes.func
 };
 
 const areEqual = (prev, next) => (
-  prev.text === next.text
+  prev.id === next.id
 );
 
-export default memo(Label, areEqual);
+export default memo(Email, areEqual);

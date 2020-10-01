@@ -1,0 +1,24 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { action } from '@storybook/addon-actions';
+import Modal from './Modal';
+import Text from '../Text';
+
+<Meta title="Example/Modal"  component={Modal} />
+
+# Modal
+
+## Props
+| Name | Type | Default Value | Description |
+|---|:---:|---:|---|
+| topContent | node | '' |node means a string or a react component|
+| lowerContent | node | '' |-|
+
+## Code Sample
+<Canvas>
+  <Story name="Playground" showCode>
+    <Modal
+      topContent={<Text>test 1</Text>}
+      bottomContent={<Text bold>test 2</Text>}
+    />
+  </Story>
+</Canvas>

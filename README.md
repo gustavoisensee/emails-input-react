@@ -42,9 +42,10 @@ An example of use would it be:
   </body>
   <script>
     var root = document.getElementById('root');
-    var props = {}; // if needed
+    var div = document.createElement('div');
 
-    window.miro.emailInputs(root, props);
+    miro.emailEditor(div);
+    root.appendChild(div);
   </script>
 </html>
 ```

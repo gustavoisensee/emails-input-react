@@ -1,62 +1,23 @@
-import React, { Fragment, useState, useCallback } from 'react';
-import is from 'is_js';
+import React, { useState, Fragment, useCallback } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import Modal from '../../atoms/Modal';
 import Button from '../../atoms/Button';
+import Input from '../../atoms/Input';
 import Email from '../../atoms/Email';
 import EmailContainer from '../../atoms/EmailContainer';
-import Modal from '../../atoms/Modal';
 import Text from '../../atoms/Text';
-import Input from '../../atoms/Input';
+import { initialState } from '../../../constants/emailEditor';
+import { handleEmailChecks } from '../../../helpers/emailEditor';
 import styles from './style.module.css';
 
-const initialState = [
-  { id: 'a1', text: 'test1@miro.com', valid: true },
-  { id: 'a2', text: 'test2@miro.com', valid: true },
-  { id: 'a3', text: 'test3@miro.com', valid: true }
-];
-
-const ENTER = 13;
-const COMMA = 188;
-const KEY_V = 86;
-const KEY_COMMAND = 91;
-const FOCUS_OUT = undefined;
-const keyCodes = [ENTER, COMMA, FOCUS_OUT];
-
 const EmailInputs = () => {
+  // this could be also set in a store or an observable,
+  // so TopContent and BottomContent could be split in other separate
+  // components and would not be needed to pass handle functions by props
   const [emails, setEmails] = useState(initialState);
 
-  const handleAddEmail = (e) => {
-    const isCommand = [e.key, e.metaKey].includes('Meta');
-    const val = e?.target?.value.trim() || '';
-
-    // Ctrl + v / Command + v
-    if ([KEY_V, KEY_COMMAND].includes(e.keyCode) && (e.ctrlKey || isCommand)) {
-      const finalList = [];
-      const list = val.split(',') || [];
-
-      list.forEach(text => {
-        if (text.trim()) {
-          finalList.push({
-            id: uuidv4(),
-            text,
-            valid: is.email(text)
-          })
-        }
-      });
-      setEmails([...emails, ...finalList]);
-      return;
-    }
-
-    // Command and Enter
-    if (val && keyCodes.includes(e.keyCode)) {
-      const text = e.keyCode === COMMA ? val.substring(0, val.length - 1) : val;
-
-      setEmails([...emails, {
-        id: uuidv4(),
-        text,
-        valid: is.email(text)
-      }]);
-    }
+  const handleAddEmail = (event) => {
+    handleEmailChecks(event, emails, setEmails);
   };
 
   const handleDeleteEmail = (id) => {

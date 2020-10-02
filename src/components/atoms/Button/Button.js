@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './style.module.css';
 
 const Button = ({ text, onClick }) => (
-  <button onClick={() => setTimeout(onClick, 300)} className={styles.button}>
+  <button onClick={onClick} className={styles.button}>
     {text}
   </button>
 );

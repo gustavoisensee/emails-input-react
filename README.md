@@ -1,6 +1,6 @@
 # Miro Component Library
 
-This project builds into a diagnostic library independent of technology such as react, vue or angular, the only thing needed to use it are HTML and Javascript.
+This project builds a diagnostic component library independent of technology such as react, vue or angular, the only things needed to use it are HTML and Javascript.
 This project was created with:
 * create react app
 * storybook
@@ -10,11 +10,11 @@ This project was created with:
 Apart from the components to be created with react, its build generates a pure javascript execution, this means any javascript code can use this component library.
 
 
-# What can you run
-Make sure you have `node` and `git` installed
+# What can you run?
+Make sure you have `node` and `git` installed.
 
 ## Install
-I suggest to clone the project and execute `yarn install` or `npm install`
+Clone the project and execute `yarn install` or `npm install` in the root.
 
 ## Storybook
 In order to see all components and their props you can run

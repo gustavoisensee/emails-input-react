@@ -1,4 +1,4 @@
-# Miro Component Library
+# Emails Input
 
 This project builds a diagnostic component library independent of technology such as react, vue or angular, the only things needed to use it are HTML and Javascript.
 This project was created with:

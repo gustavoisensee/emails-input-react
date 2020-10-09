@@ -3,9 +3,9 @@ import { handleEmailChecks } from './emailEditor';
 
 describe('emailEditor', () => {
   it('should add the new email when Comma or Enter is pressed', () => {
-    const email = 't@miro.com,';
+    const email = 't@test.com,';
     const emailsSubstring = email.substring(0, email.length - 1);
-    let emails = [{ id: 1, text: 'test@miro.com', valid: true }];
+    let emails = [{ id: 1, text: 'test@test.com', valid: true }];
     const setEmails = (_emails) => { emails = _emails };
 
     handleEmailChecks({ keyCode: COMMA, target: { value: email } }, emails, setEmails);
@@ -19,8 +19,8 @@ describe('emailEditor', () => {
   });
 
   it('should add the new email(s) when copy and paste', () => {
-    const email = 'test,t@miro.com';
-    let emails = [{ id: 1, text: 'test@miro.com', valid: true }];
+    const email = 'test,t@test.com';
+    let emails = [{ id: 1, text: 'test@test.com', valid: true }];
     const setEmails = (_emails) => { emails = _emails };
 
     handleEmailChecks({
@@ -28,7 +28,7 @@ describe('emailEditor', () => {
     }, emails, setEmails);
     expect(emails).toHaveLength(3);
 
-    const newEmail = emails.find(e => e.text === 't@miro.com' && !!e.valid);
+    const newEmail = emails.find(e => e.text === 't@test.com' && !!e.valid);
     expect(newEmail).toBeTruthy();
 
     const invalidEmail = emails.find(e => e.text === 'test' && e.valid === false);

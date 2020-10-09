@@ -4,15 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Test App</title>
+    <style>
+      #root {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
   </body>
   <script>
     var root = document.getElementById('root');
-    var div = document.createElement('div');
-
-    miro.emailEditor(div);
-    root.appendChild(div);
+    lib.emailEditor(root);
   </script>
 </html>

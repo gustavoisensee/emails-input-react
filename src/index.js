@@ -13,7 +13,7 @@ const render = (container, Comp, props) => {
   ReactDOM.render(<Comp {...props} />, container);
 };
 
-window.miro = {
+window.lib = {
   button: (container, props) => render(container, Button, props),
   email: (container, props) => render(container, Email, props),
   emailContainer: (container, props) => render(container, EmailContainer, props),

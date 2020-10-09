@@ -31,7 +31,7 @@ const EmailInputs = () => {
       const val = Math.random().toString(20).substring(7);
       setEmails([...emails, {
         id: uuidv4(),
-        text: `${val}@miro.com`,
+        text: `${val}@test.com`,
         valid: true
       }]);
     },

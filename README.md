@@ -1,6 +1,13 @@
 # Emails Input
 
-This project builds a diagnostic component library independent of technology such as react, vue or angular, the only things needed to use it are HTML and Javascript.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4b1d2d95-bdff-4136-a31a-270cc14272c3/deploy-status)](https://app.netlify.com/sites/gus-emails-input-react/deploys)
+
+[Demo](https://gus-emails-input-react.netlify.app/)
+
+[Storybook](https://gus-emails-input-react-storybook.netlify.app/)
+
+This project builds an agnostic component library independent of technology such as react, vue or angular, the only things needed to use it are HTML and Javascript.
+
 This project was created with:
 * create react app
 * storybook
@@ -35,17 +42,20 @@ An example of use would it be:
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Test App</title>
     <link href="bundle.css" rel="stylesheet">
+    <style>
+      #root {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
-    <script src="bundle.js"></script>
   </body>
+  <script src="bundle.js"></script>
   <script>
     var root = document.getElementById('root');
-    var div = document.createElement('div');
-
-    miro.emailEditor(div);
-    root.appendChild(div);
+    lib.emailEditor(div);
   </script>
 </html>
 ```

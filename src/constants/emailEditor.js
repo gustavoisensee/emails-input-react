@@ -1,7 +1,7 @@
 export const initialState = [
-  { id: 'a1', text: 'test1@miro.com', valid: true },
-  { id: 'a2', text: 'test2@miro.com', valid: true },
-  { id: 'a3', text: 'test3@miro.com', valid: true }
+  { id: 'a1', text: 'test1@test.com', valid: true },
+  { id: 'a2', text: 'test2@test.com', valid: true },
+  { id: 'a3', text: 'test3@test.com', valid: true }
 ];
 
 export const ENTER = 13;

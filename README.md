@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4b1d2d95-bdff-4136-a31a-270cc14272c3/deploy-status)](https://app.netlify.com/sites/gus-emails-input-react/deploys)
 
-[Demo](https://gus-emails-input-react.netlify.app/)
+[Demo](https://emails-input-react.gustavoisensee.io/)
 
 [Storybook](https://gus-emails-input-react-storybook.netlify.app/)
 
